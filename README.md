@@ -37,9 +37,20 @@ _Let op:_ OpenAI gebruikt standaard strict mode. Daarbij moeten alle velden in h
 > **Beantwoord de volgende vragen voordat je verdergaat:**
 >
 > 1. Waarom is een antwoord dat geldige JSON bevat nog geen bruikbare data voor je applicatie?
+
+Json controleert de syntax maar niet de inhoud van de tekst of data
+
 > 2. Wat is het verschil tussen de controle die TypeScript doet en de controle die Zod doet? Waarom heb je voor de output van een model Zod nodig?
+
+Zod controleert de data tijdens de runtime, of de syntax klopt. Typescrippt controleert vooraf of de syntax klopt maar niet tijdens het gebruik.
+
 > 3. Welk veld in jouw schema mag `null` zijn, en waarom? Wat zou het model doen als dat veld níet `null` mocht zijn en de informatie ontbreekt in de tekst?
+
+Bijna elk veld mag null zijn. Als je dat niet doet is de kans op hallucineren van het model om toch een antwoord te geven groot.
+
 > 4. Waarom heb je voor dit veld gekozen voor een `z.enum()` en niet voor een gewone `z.string()`?
+
+Voor je vergelijk wil je vaste herkenbare algemene waardes hebben. En niet geconfronteerd worden met niveaus die geen relatie hebben tot andere vacatures.
 
 ### 2. Bouw de extractiefunctionaliteit
 
