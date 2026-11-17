@@ -12,7 +12,7 @@ import {saveChat} from "@/lib/chat/cruds";
 export async function POST(request: Request) {
   const CONTEXT = 'Je bent een docent die alleen antwoorden mag geven over webdevelopment. Zeg geen dingen voor maar stuur gebruikers alleen in de goede richting. Antwoord in het nederlands in maximaal 5 zinnen'
   const TEMPERATURE = 0.7
-  const MAX_OUTPUT_TOKENS = 500
+  const MAX_OUTPUT_TOKENS = 1000
 
   if (!process.env.OPENAI_API_KEY) {
     return Response.json(
