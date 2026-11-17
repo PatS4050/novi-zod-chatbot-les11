@@ -1,4 +1,3 @@
-zou dit mijn pagina kunnen zijn?
 import type { Vacature } from '@/lib/vacature/schema';
 
 type VacatureKaartProps = {
