@@ -9,7 +9,7 @@ export const vacatureSchema = z.object ({
     salarisMax: z.number().int().nullable().describe('Het maximale bruto salarais in euros'),
     salarisMin: z.number().int().nullable().describe('Het minimale brutos salaris in euros') ,
     vaardigheden: z.array(z.string()).describe('Een lijst van vereiste vaardigheden'),
-
+    remote: z.string().nullable().describe('De mate waarin hybride gewerkt kan worden'),
 });
 // TODO: vervang dit tijdelijke type door: export type Vacature = z.infer<typeof vacatureSchema>;
 /*export type Vacature = {

@@ -9,10 +9,10 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@ai-sdk/openai": "^4.0.102",
+    "@ai-sdk/openai": "^4.0.118",
     "@ai-sdk/react": "^4.0.157",
     "@supabase/supabase-js": "^2.119.0",
-    "ai": "^7.0.153",
+    "ai": "^7.0.173",
     "next": "16.4.3",
     "react": "19.3.0",
     "react-dom": "19.3.0",
